@@ -123,7 +123,7 @@ body {
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <span class="logo-font">MTs. </span>Miftahul Ulum   
+                        <span class="logo-font">MTs. </span>Darul Ulum II
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@ body {
                     <form class="login-form" action="<?= base_url('loginadm/ceklogin')?>" method="post">
                         <div class="form-group">
                             <br>
-                            <?php echo password_hash('admin', PASSWORD_DEFAULT) ?>
+                            <?php //echo password_hash('admin', PASSWORD_DEFAULT) ?>
                     <?php 
         if(!empty($this->session->flashdata("error"))){
          ?>

@@ -51,8 +51,8 @@ class Loginadm extends CI_Controller{
         if ($this->ProsesDB->doLogin($post)){
               redirect(site_url('webadmsekolah'));
            }
-           $this->session->set_flashdata('error','Username & Password ss salah');
-         // redirect(site_url('loginadm'));
+           $this->session->set_flashdata('error','Username & Password salah');
+         redirect(site_url('loginadm'));
       }
       else{
         
