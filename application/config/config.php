@@ -27,9 +27,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 // $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 // $config['base_url']='https://ma-alhasanahpasean.sch.id';
-// $config['base_url'] = 'http://localhost:8080/mts/';
+$config['base_url'] = 'http://localhost:8080/mts/';
 // $config['base_url'] = 'http://192.168.0.110/mts/';
-$config['base_url']='https://www.mtsdadu.sch.id/';
+// $config['base_url']='https://www.mtsdadu.sch.id/';
 
 /*
 |--------------------------------------------------------------------------

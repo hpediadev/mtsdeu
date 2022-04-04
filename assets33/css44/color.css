@@ -59,16 +59,14 @@ a:active,
 .tg-btncommentreply:hover i,
 .tg-btncommentreply:hover em,
 .tg-comingcountdown .tg-counterbox span:first-child,
-/*=============================================
-			warna 2
-=============================================*/
-.tg-navigation > ul > li.current-menu-item a[data-new]:after{color:#55769c;}
+.tg-navigation > ul > li.current-menu-item a[data-new]:after{color: #3575d3;}
 /*=============================================
 			Theme Background Color
 =============================================*/
 .tg-btn,
 .tg-theme-tag,
 a[data-new]:after,
+.tg-btnsearch,
 #tg-magicbox,
 .sub-menu li a:before,
 .mega-menu-row + .mega-menu-row,
@@ -96,7 +94,7 @@ a[data-new]:after,
 .tg-detailpage blockquote:before,
 .tg-tag:hover,
 .tg-newsandarticle .tg-newspost .tg-btn:hover,
-.tg-nav .navbar-toggle{background-color:#55769c;}
+.tg-nav .navbar-toggle{background:#3575d3;}
 /*=============================================
 			Theme Border Color
 =============================================*/
@@ -108,11 +106,4 @@ input:focus,
 a[data-new]:before,
 .tg-headervtwo .tg-navigation ul li:hover a[data-new]:before,
 .tg-headervtwo .tg-navigation ul li a:hover[data-new]:before,
-.tg-tag:hover{border-color: #55769c;}
-.cobasaja{color: #55769c;}
-/*a{
-	color: green;
-}
-a:hover{
-	color: red;
-}*/
+.tg-tag:hover{border-color: #3575d3;}

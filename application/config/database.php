@@ -75,9 +75,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	
 	'hostname' => 'localhost',
-	'username' => 'mtsmift5_sentraltekno',
-	'password' => 'MiftahulUlum999',
-	'database' => 'mtsmift5_sentralteknodigital',
+	'username' => 'mtsdadus_dur',
+	'password' => '231@##$$DFgh',
+	'database' => 'mtsdadus_dur',
 
 	
 	'username' => 'root',
@@ -90,9 +90,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'mtsdadus_dur',
-	'password' => '231@##$$DFgh',
-	'database' => 'mtsdadus_dur',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'websekolah',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
