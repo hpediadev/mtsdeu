@@ -1,0 +1,11 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mtsmift5/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp -r application $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
+    - /bin/cp -r assets4 $DEPLOYPATH
+    - /bin/cp -r system $DEPLOYPATH
+    - /bin/cp -r uploads $DEPLOYPATH
+    - /bin/cp -r vendor $DEPLOYPATH
