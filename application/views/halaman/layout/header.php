@@ -104,8 +104,10 @@
                 }
             } else if ($menu == 'bantuan') {
                 $bantuan = 'current-menu-item';
+                $judul = 'Bantuan | MTs. Darul Ulum II';
             } else if ($menu == 'alumni') {
                 $alumni = 'current-menu-item';
+                $judul = 'Alumni | MTs. Darul Ulum II';
             } else if ($menu == 'siswa') {
                 $siswa = 'current-menu-item';
             } else if ($menu == 'home' or empty($menu)) {
@@ -113,20 +115,20 @@
                 $judul = 'MTs. Darul Ulum II';
             } else if ($menu == 'profil') {
                 $profil = "current-menu-item";
-                $judul = 'Profil MTs. Darul Ulum II';
+                $judul = 'Profil | MTs. Darul Ulum II';
                 $profilsekolah = "current-menu-item";
             } else if ($menu == 'sejarah') {
                 $profil = 'current-menu-item';
                 $sejarah = 'current-menu-item';
-                $judul = 'Sejarah MTs. Darul Ulum II';
+                $judul = 'Sejarah | MTs. Darul Ulum II';
             } else if ($menu == 'visimisi') {
                 $profil = "current-menu-item";
                 $visimisi = "current-menu-item";
-                $judul = 'Visi Misi MTs. Darul Ulum II';
+                $judul = 'Visi Misi | MTs. Darul Ulum II';
             } else if ($menu == 'struktur') {
                 $profil = "current-menu-item";
                 $struktur = "current-menu-item";
-                $judul = 'Struktur MTs. Darul Ulum II';
+                $judul = 'Struktur | MTs. Darul Ulum II';
             } else if ($menu == 'ekskul') {
                 $ekskulid = "current-menu-item";
                 $b=0;
@@ -159,7 +161,7 @@
                 }
             } else if ($menu == 'guru') {
                 $guru = "current-menu-item";
-                $judul = 'Guru MTs. Darul Ulum II';
+                $judul = 'Guru | MTs. Darul Ulum II';
             }
         } 
 
@@ -463,7 +465,7 @@
                                                     </a>
                                                 </li> -->
                                                 <li class="<?= $alumni ?>"><a href="<?= base_url('alumni.html') ?>">Alumni</a></li>
-                                                <li class="<?= $siswa ?>"><a href="<?= base_url('siswa.html') ?>">Grafik Siswa</a></li>
+                                                <!-- <li class="<?= $siswa ?>"><a href="<?= base_url('siswa.html') ?>">Grafik Siswa</a></li> -->
                                                 <li class="<?= $bantuan ?>"><a href="<?= base_url('bantuan.html') ?>">Bantuan</a></li>
 
                                             </ul>
