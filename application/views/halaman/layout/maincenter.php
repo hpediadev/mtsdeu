@@ -89,8 +89,8 @@
                                 echo "<p>".substr($r->SAMBUTAN,0,400)."</p>";
                             }?>
                         </div>
-                        <span class="tg-name"><b>NURHASAN, S.Pd</b></span>
-                        <span class="tg-designation">Kepala Madrasah</span>
+                       <!--  <span class="tg-name"><b>NURHASAN, S.Pd</b></span>
+                        <span class="tg-designation">Kepala Madrasah</span> -->
                         <div class="tg-btnpluslogo">
                             <a class="tg-btn" href="<?= base_url('sambutan/')?>">Selengkapnya...</a>
                            <!--  <strong class="tg-universitylogo"><a href="javascript:void(0);"><img src="<?= base_url('uploads/' . $u->LOGO) ?>" alt="image description"></a></strong> -->
