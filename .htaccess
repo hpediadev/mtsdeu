@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^mtsmiftahululumpegantenan.sch.id [NC]
+RewriteCond %{HTTP_HOST} ^mtsdadu.sch.id [NC]
 
-RewriteRule ^(.*)$ http://www.mtsmiftahululumpegantenan.sch.id/$1 [L,R=301,NC]
+RewriteRule ^(.*)$ http://www.mtsdadu.sch.id/$1 [L,R=301,NC]
 
 
 
