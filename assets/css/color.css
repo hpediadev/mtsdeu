@@ -62,7 +62,7 @@ a:active,
 /*=============================================
 			warna 2
 =============================================*/
-.tg-navigation > ul > li.current-menu-item a[data-new]:after{color:#55769c;}
+.tg-navigation > ul > li.current-menu-item a[data-new]:after{color:#bd8306;}
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -96,7 +96,7 @@ a[data-new]:after,
 .tg-detailpage blockquote:before,
 .tg-tag:hover,
 .tg-newsandarticle .tg-newspost .tg-btn:hover,
-.tg-nav .navbar-toggle{background-color:#55769c;}
+.tg-nav .navbar-toggle{background-color:#bd8306;}
 /*=============================================
 			Theme Border Color
 =============================================*/
@@ -108,10 +108,10 @@ input:focus,
 a[data-new]:before,
 .tg-headervtwo .tg-navigation ul li:hover a[data-new]:before,
 .tg-headervtwo .tg-navigation ul li a:hover[data-new]:before,
-.tg-tag:hover{border-color: #55769c;}
-.cobasaja{color: #55769c;}
+.tg-tag:hover{border-color: #bd8306;}
+.cobasaja{color: #bd8306;}
 /*a{
-	color: green;
+	color: #bd8306;
 }
 a:hover{
 	color: red;
