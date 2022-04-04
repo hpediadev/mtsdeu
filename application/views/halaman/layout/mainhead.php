@@ -11,7 +11,7 @@
                                     <p>Info Pembekalan Tahun Praktik Kerja Lapangan akan dilakukan hari senin12 Juni 2022, Informasi Lebih Lanjut <a href="" style="background-color: <?= $warna2?>; padding: 2px;color: white;" id="warna2"><b> Klik Disini </b></a></p>
                                 </div> -->
                                 
-                                    <marquee>Selamat Datang di MTS. Miftahul Ulum Pegantenan Pamekasan, Segera Bergabun dengan Kami</marquee>
+                                    <marquee>Selamat Datang di MTS. Darul Ulum II Waru Barat Waru Pamekasan, Segera Bergabung dengan Kami</marquee>
                             </div>
                              <!-- <div class="item">
                                 <div class="tg-description">
