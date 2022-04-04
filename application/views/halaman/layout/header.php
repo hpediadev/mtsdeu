@@ -110,23 +110,23 @@
                 $siswa = 'current-menu-item';
             } else if ($menu == 'home' or empty($menu)) {
                 $home = 'current-menu-item';
-                $judul = 'MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'MTs. Darul Ulum II';
             } else if ($menu == 'profil') {
                 $profil = "current-menu-item";
-                $judul = 'Profil MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'Profil MTs. Darul Ulum II';
                 $profilsekolah = "current-menu-item";
             } else if ($menu == 'sejarah') {
                 $profil = 'current-menu-item';
                 $sejarah = 'current-menu-item';
-                $judul = 'Sejarah MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'Sejarah MTs. Darul Ulum II';
             } else if ($menu == 'visimisi') {
                 $profil = "current-menu-item";
                 $visimisi = "current-menu-item";
-                $judul = 'Visi Misi MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'Visi Misi MTs. Darul Ulum II';
             } else if ($menu == 'struktur') {
                 $profil = "current-menu-item";
                 $struktur = "current-menu-item";
-                $judul = 'Struktur MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'Struktur MTs. Darul Ulum II';
             } else if ($menu == 'ekskul') {
                 $ekskulid = "current-menu-item";
                 $b=0;
@@ -159,7 +159,7 @@
                 }
             } else if ($menu == 'guru') {
                 $guru = "current-menu-item";
-                $judul = 'Guru MTs. Miftahul Ulum Pegantenan Pamekasan';
+                $judul = 'Guru MTs. Darul Ulum II';
             }
         } 
 
@@ -335,7 +335,7 @@
                                     </strong>
                                     <div class="tg-noticeboard hidden-xs">
                                         <div class="tg-textbox" style="color:#fff;"><br><br>
-                                            <span>www.mtsmiftahululumpegantenan.sch.id</span>
+                                            <span>www.mtsdadu.sch.id</span>
                                             <span>
                                                 <i class="fa fa-phone"></i>
                                                 <?= $u->TELP ?>
