@@ -8,6 +8,13 @@
 
 
 <head>
+    <!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
 
     <meta charset="utf-8">
@@ -33,16 +40,10 @@
         // $warna2 ='#33CEFF';
         // $warna3 ='#09a048';
 
-        // $warna1 = '#4390cf';
-        // $warna2 = '#55769c';
-        // $warna3 = $warna2;
-
-        // punya SMK
-
-
-        $warna1 = 'orange';
-        $warna2 = '#bd8306';
+        $warna1 = '#4390cf';
+        $warna2 = '#55769c';
         $warna3 = $warna2;
+
 
         // warna biru langit #4390cf
 
@@ -170,7 +171,9 @@
 
     <title><?= $judul ?></title>
     <meta name="description" content="">
-   <!--  <meta property="og:url" content="<?= $uri_path ?>" />
+    <meta name="google-site-verification" content="mnzElWY4cok_4nVzVolkACmqqE-_wvRuNjLXEaMEj7U" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="<?= $uri_path ?>" />
     <meta property="og:image" content="<?= $gambar ?>" />
 
     <meta property="og:title" content="<?= $judul ?>" />
@@ -179,7 +182,7 @@
 
     <meta property="og:image:width" content="1200" />
 
-    <meta property="og:image:height" content="630" /> -->
+    <meta property="og:image:height" content="630" />
     <!--  <link rel="apple-touch-icon" href="<?= base_url('apple-touch-icon.png') ?>"> -->
     <link rel="icon" href="<?= base_url('logo.png') ?>" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
@@ -245,6 +248,8 @@
         }
     </style>
 
+    <!-- Bagian css -->
+            <!-- Akhir dari Bagian css -->
             <scrhipt src="<?= base_url('assets/slideshow/assets/js/jquery-1.10.1.min.js') ?>">
                 </script>
                 <scrihpt src="<?= base_url('assets/slideshow/assets/js/bootstrap.min.js') ?>">
@@ -298,6 +303,8 @@
                             }
                         }
                     </script>
+
+
 </head>
 
 <body class="tg-home tg-homefour">
@@ -486,3 +493,79 @@
 
         </header>
 
+
+    <div class="row" >
+<?php if($menu=="home" OR empty($menu)){  ?>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: -10px;" >
+        <!-- S -->
+        <div id="slideshow-mudah" class="carousel slide" data-ride="carousel" >
+          <!-- Indicators, Ini adalah Tombol BULET BULET dibawah. item ini dapat dihapus jika tidak diperlukan -->
+          <ol class="carousel-indicators">
+            <?php
+            $no = 0;
+            $k = '';
+            $nno = 0;
+            $kk = '';
+
+            $slide = $this->db->order_by('IDSLIDE','DESC');
+            $slide = $this->db->limit(5);
+            $slide = $this->db->get('tslide_md')->result();
+            foreach ($slide as $row) {
+              if ($no == 0)
+                $k = 'active';
+              else
+                $k = '';
+              $idwows = 'wows1_' . $no;
+            ?>
+              <li data-target="#slideshow-mudah" data-slide-to="<?= $no ?>" class="<?= $k ?>"></li>
+            <?php $no++;
+            } ?>
+          </ol>
+
+          <!-- Wrapper for slides, Ini adalah Tempat Gambar-->
+          <div class="carousel-inner">
+            <?php
+            $no = 0;
+            $k = '';
+            $nno = 0;
+            $kk = '';
+
+            $slide = $this->db->order_by('IDSLIDE','DESC');
+            $slide = $this->db->limit(5);
+            $slide = $this->db->get('tslide_md')->result();
+            foreach ($slide as $row) {
+              if ($no == 0)
+                $k = 'active';
+              else
+                $k = '';
+              $idwows = 'wows1_' . $no;
+            ?>
+              <div class="item <?= $k ?>" >
+                <img width="100%"  alt="slideshow-mudah" src="<?php echo base_url('uploads/' . $row->GAMBAR) ?>">
+                <!—Gambar -->
+                  <div class="carousel-caption">
+                    <!--Penjelasan 
+                                <h3>Slide 1 (Judul)</h3>
+                                <p>Ini adalah Slide 1 (Penjelasan)</p>-->
+                  </div>
+              </div>
+
+            <?php $no++;
+            echo $menu;
+            } ?>
+
+
+          </div>
+
+          <!-- Controls, Ini adalah Panah Kanan dan Kiri. item ini dapat dihapus jika tidak diperlukan-->
+          <a class="left carousel-control" href="#slideshow-mudah" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#slideshow-mudah" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+       
+      </div>
+      <?php } ?>
+  </div>
