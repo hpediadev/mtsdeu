@@ -382,12 +382,12 @@
           </a>
         
         </li>
-        <li class="<?= $siswa?>">
+       <!--  <li class="<?= $siswa?>">
           <a href="<?php echo base_url('webadmsekolah/siswa')?>">
             <i class="fa fa-pie-chart"></i> <span>Grafik Siswa</span>
           </a>
         
-        </li>
+        </li> -->
         <li class="<?= $penga?>">
           <a href="<?php echo base_url('webadmsekolah/profiluser')?>">
             <i class="fa fa-gear"></i> <span>Pengaturan Akun</span>
