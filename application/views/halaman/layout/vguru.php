@@ -28,10 +28,17 @@
                                 $bl = substr($tanggal,5,2);
                                 $th = substr($tanggal,0,4);
                             }
+                            $g=0;
                             $n=0;
+                            $t='ssssssss sss sss';
                            foreach ($guru->result() as $row) {
-                               // code...
+                            $g++;
                             $n++;
+                               // code...
+                            if($g%2==0)
+                                $t='';
+                            else
+                                $t='jhja ajhgas afaghs';
                             $jk='';
                             if($row->JKGURU==1){
                               $jk = 'Laki-laki';
@@ -65,38 +72,31 @@
                               $jb = 'Guru';
                             }
                                 ?>
-
+                        <!-- 
                         
-                       <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <article class="tg-themepost tg-course">
-                            <figure class="tg-featuredimg">
-                                <a href="javascript:void(0);">
-                                    <img src="<?= base_url('uploads/artikel/'.$row->GAMBARGURU)?>" alt="image description">
-                                </a>
-                            </figure>
-                            <div class="tg-themepostcontent">
-                                <div class="tg-themeposttitle" style="text-align:center">
-                                    <b style="font-size: 13px;text-align: center;" id="warna2-bg"><u><?= $row->NAMAGURU?></u></b><br>
-                                    <span><?= $jb ?></span>
+                        <div class="cols-xs-6 s-sm-6 col-md-3 col-lg-3 mb-2">
+                           <div style="background-color:#F5F5F5;padding: 6px;" id="warsna2">
+                                <img style="width:100%;height: 250px" src="<?= base_url('uploads/artikel/'.$row->GAMBARGURU)?>" alt="image description">
+                            
+                                <br><br>
+                                <center>
+                                    <b style="font-size: 13px;color:;" id="warna2-bg"><u><?= $row->NAMAGURU?></u></b><br>
+                                    <?= $jb?><br>
                                     <div style="font-size: 20px;">
-                                        <i class="fa fa-facebook"></i> |
-                                        <i class="fa fa-instagram"></i> |
-                                        <i class="fa fa-twitter"></i> 
-                                    </div>
+                                    <i class="fa fa-facebook"></i> |
+                                    <i class="fa fa-instagram"></i> |
+                                    <i class="fa fa-twitter"></i> 
                                 </div>
-                                
-                            </div>
-                        </article>
-                    </div>
-                    <?php 
-                        if($n%4==0)
-                            echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">&nbsp;</div>';
-                } ?>
-                        
-                     <!--    <div class="cols-xs-6 s-sm-6 col-md-3 col-lg-3 mb-2">
-                            <div class="tg-shortcode tlg-welcomeandgreeting" >
+                                </center>
+                             </div>
+                           <br><br>
+                        </div> -->
 
-                                        <figure ><img styale="width:200px;hleight:250px" src="https://www.smkpbwaru.sch.id/uploads/artikel/2022-01-08%2011-01-48-foto-slide.jpg" alt="image description"></figure>
+                        
+                        <div class="cols-xs-6 s-sm-6 col-md-3 col-lg-3 mb-2">
+                            <div class="tg-shortcode tlg-welcomeandgreeting" style="background-color:#F5F5F5;padding: 6px;">
+
+                                        <figure ><img styale="width:200px;hleight:250px" src="<?= base_url('uploads/artikel/'.$row->GAMBARGURU)?>" alt="image description"></figure>
 
                                 <center>
                                     <b style="font-size: 13px;color:;" id="warna2-bg"><u><?= $row->NAMAGURU?></u></b><br>
@@ -107,9 +107,14 @@
                                     <i class="fa fa-twitter"></i> 
                                 </div>
                                 </center>
-                        </div>
-                                    
-                    </div> -->
+                        </div>   
+                    </div>
+                    
+                    <?php 
+                    if($n%4==0)
+                        echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">&nbsp;</div>';
+                } ?>
+                        
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
                             <center class="tg-themepost tg-eventpost">
                                 <?php echo $this->pagination->create_links(); ?>

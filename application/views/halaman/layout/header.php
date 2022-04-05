@@ -495,6 +495,7 @@ ga('send', 'pageview');
 
 
     <div class="row" >
+        <div class="container">
 <?php if($menu=="home" OR empty($menu)){  ?>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: -10px;" >
         <!-- S -->
@@ -569,3 +570,4 @@ ga('send', 'pageview');
       </div>
       <?php } ?>
   </div>
+</div>

@@ -15,6 +15,40 @@
 									</div>
 								</div> -->
 								<div class="tg-widget tg-widgetnoticeboard">
+									<div class="tg-borderheading sidebar">
+										<!-- <div class="split"></div>
+	                                        <h2>&nbsp;Link</h2>
+	                                    </div>
+	                                     -->
+	                                            <?php
+	                                        $sql = $this->db->order_by('IDARTIKEL','DESC');
+	                                        $sql = $this->db->limit(1);
+	                                        $sql =  $this->db->get_where('tartikel_md',array('KATEGORI'=>'informasi'))->result();
+	                                        foreach ($sql as $s) {
+	                                            # code...
+
+	                                $jdl = str_replace(" ","-",$s->JUDUL);
+	                                        $t = $s->TANGGALARTIKEL;
+	                                                     $tgl = substr($t, 8,2);
+	                                                     $bln = substr($t, 5,2);
+	                                                     $thn = substr($t, 0,4);
+	                                        ?>
+	                                <div class="tg-widget tg-widgetadmissionform">
+	                                    <div class="tg-widgetcontent">
+	                                        <h3>Informasi Utama</h3>
+	                                        <div class="tg-description">
+	                                            <p><?= $s->JUDUL?></p>
+	                                        </div>
+	                                        <a class="tg-btn tg-btnicon" href="<?=  base_url()?>berita/read/<?= $tgl.'/'.$bln.'/'.$thn.'/'.$s->LINK.'.html'; ?>">
+	                                            <span>Selanjutnya...</span>
+	                                        </a>
+	                                    </div>
+	                                </div>
+
+	                                    <?php } ?>
+	                                </div>
+	                            </div>
+								<div class="tg-widget tg-widgetnoticeboard">
                                     <div class="tg-borderheading sidebar">
 									<div class="split"></div>
                                         <h2>&nbsp;Berita Populer</h2>
@@ -74,7 +108,6 @@
                                                 <div class="tg-campustitle">
                                                     <h3><a href="<?=  base_url()?>berita/read/<?= $tg.'/'.$b.'/'.$th.'/'.$slidebar->LINK.'.html'; ?>"><?= $slidebar->JUDUL?></a></h3>
                                                 </div>
-
 											</div>
 										</article>
                                     <?php } ?>
@@ -137,17 +170,17 @@
                                                      $bln = substr($t, 5,2);
                                                      $thn = substr($t, 0,4);
 										?>
-								<div class="tg-widget tg-widgetadmissionform">
+							<!-- 	<div class="tg-widget tg-widgetadmissionform">
 									<div class="tg-widgetcontent">
 										<h3>Informasi Utama</h3>
 										<div class="tg-description">
 											<p><?= $s->JUDUL?></p>
 										</div>
-										<a class="tg-btn tg-btnicon" href="<?=  base_url()?>berita/read/<?= $tgl.'/'.$bln.'/'.$thn.'/'.$s->IDARTIKEL.'/'.$jdl.'.html'; ?>">
+										<a class="tg-btn tg-btnicon" href="<?=  base_url()?>berita/read/<?= $tgl.'/'.$bln.'/'.$thn.'/'.$s->LINK.'.html'; ?>">
 											<span>Selanjutnya...</span>
 										</a>
 									</div>
-								</div>
+								</div> -->
 
 									<?php } ?>
 									
@@ -171,12 +204,24 @@
                                     <div class="tg-borderheading sidebar">
                                     <div class="split"></div>
                                         <h2>&nbsp;Follow US</h2>
+                                        <?php
+											foreach ($dataLembaga as $u) {
+												$nama = $u->NAMALEMBAGA;
+												$alamat = $u->ALAMATLEMBAGA;
+												$telp = $u->TELP;
+												$email = $u->EMAILLEMBAGA;
+												$hp = $u->HP;
+												$fb = $u->FACEBOOK;
+												$ig = $u->INSTAGRAM;
+												//echo 'Situs Resmi : '.ucwords(htmlentities(htmlspecialchars(strtoupper($yu ))));
+											}
+											?>
                                     </div>
                                     <div class="tg-tags">
-                                    	<a target="_blank" href="https://www.facebook.com/">
+                                    	<a target="_blank" href="<?= $fb ?>">
                                     		<img src="<?= base_url('fbb.png')?>">
                                     	</a>
-                                    	<a target="_blank" href="https://www.instagram.com//">
+                                    	<a target="_blank" href="<?= $ig?>">
                                     		<img src="<?= base_url('igg.png')?>">
                                     	</a>
                                     </div>
@@ -187,7 +232,7 @@
                                         <h2>&nbsp;Facebook</h2>
                                     </div>
                                     
-                                  	<!-- FACEBOOK -->
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmkpb.waru%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=668910424247774" width="" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 
                                 </div>

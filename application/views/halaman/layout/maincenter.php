@@ -1,28 +1,103 @@
                    
   <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
         <div id="tg-content" class="tg-content">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/THybxgJ0TA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <section class="tg-sectionspace tg-haslayout">
-                                    <div class="tg-shortcode tg-welcomeandgreeting">
+            <section class="tg-sectionspace tg-haslayout">
+               
+    <div class="row" >
 
-                                                <?php foreach($data->result() as $r){ ?>
-                                        <figure ><img style="width:200px;hleight:250px" src="<?= base_url('uploads/artikel/'.$r->GAMBAR)?>" alt="image description"></figure>
-                                        <div class="tg-shortcodetextbox">
-                                            <h2>Sambutan Kepala Sekolah</h2>
-                                            <div class="tg-description">
-                                                <?php
-                                                    echo "<p>".substr($r->SAMBUTAN,0,400)."</p>";
-                                                }?>
-                                            </div>
-                                            <span class="tg-name"><b>MOH. BA'IN, S.Pd</b></span>
-                                            <span class="tg-designation">Kepala Sekolah</span>
-                                            <div class="tg-btnpluslogo">
-                                                <a class="tg-btn" href="<?= base_url('sambutan/')?>">Selengkapnya...</a>
-                                               <!--  <strong class="tg-universitylogo"><a href="javascript:void(0);"><img src="<?= base_url('uploads/' . $u->LOGO) ?>" alt="image description"></a></strong> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: -10px;" >
+        <!-- S -->
+        <div id="slideshow-mudah" class="carousel slide" data-ride="carousel" >
+          <!-- Indicators, Ini adalah Tombol BULET BULET dibawah. item ini dapat dihapus jika tidak diperlukan -->
+          <ol class="carousel-indicators">
+            <?php
+            $no = 0;
+            $k = '';
+            $nno = 0;
+            $kk = '';
+
+            $slide = $this->db->order_by('IDSLIDE ASC');
+            $slide = $this->db->limit(3);
+            $slide = $this->db->get('tslide_md')->result();
+            foreach ($slide as $row) {
+              if ($no == 0)
+                $k = 'active';
+              else
+                $k = '';
+              $idwows = 'wows1_' . $no;
+            ?>
+              <li data-target="#slideshow-mudah" data-slide-to="<?= $no ?>" class="<?= $k ?>"></li>
+            <?php $no++;
+            } ?>
+          </ol>
+
+          <!-- Wrapper for slides, Ini adalah Tempat Gambar-->
+          <div class="carousel-inner">
+            <?php
+            $no = 0;
+            $k = '';
+            $nno = 0;
+            $kk = '';
+
+            $slide = $this->db->order_by('IDSLIDE ASC');
+            $slide = $this->db->limit(3);
+            $slide = $this->db->get('tslide_md')->result();
+            foreach ($slide as $row) {
+              if ($no == 0)
+                $k = 'active';
+              else
+                $k = '';
+              $idwows = 'wows1_' . $no;
+            ?>
+              <div class="item <?= $k ?>" >
+                <img width="100%"  alt="slideshow-mudah" src="<?php echo base_url('uploads/' . $row->GAMBAR) ?>">
+                <!—Gambar -->
+                  <div class="carousel-caption">
+                    <!--Penjelasan 
+                                <h3>Slide 1 (Judul)</h3>
+                                <p>Ini adalah Slide 1 (Penjelasan)</p>-->
+                  </div>
+              </div>
+
+            <?php $no++;
+            } ?>
+
+
+          </div>
+
+          <!-- Controls, Ini adalah Panah Kanan dan Kiri. item ini dapat dihapus jika tidak diperlukan-->
+          <a class="left carousel-control" href="#slideshow-mudah" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#slideshow-mudah" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+       
+      </div>
+  </div>
+            </section>
+            <section class="tg-sectionspace tg-haslayout">
+                <div class="tg-shortcode tg-welcomeandgreeting">
+
+                            <?php foreach($data->result() as $r){ ?>
+                    <figure ><img style="width:200px;hleight:250px" src="<?= base_url('uploads/artikel/'.$r->GAMBAR)?>" alt="image description"></figure>
+                    <div class="tg-shortcodetextbox">
+                        <h2>Sambutan Kepala Sekolah</h2>
+                        <div class="tg-description">
+                            <?php
+                                echo "<p>".substr($r->SAMBUTAN,0,400)."</p>";
+                            }?>
+                        </div>
+                       <!--  <span class="tg-name"><b>NURHASAN, S.Pd</b></span>
+                        <span class="tg-designation">Kepala Madrasah</span> -->
+                        <div class="tg-btnpluslogo">
+                            <a class="tg-btn" href="<?= base_url('sambutan/')?>">Selengkapnya...</a>
+                           <!--  <strong class="tg-universitylogo"><a href="javascript:void(0);"><img src="<?= base_url('uploads/' . $u->LOGO) ?>" alt="image description"></a></strong> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="tg-sectionspace tg-haslayout">
                 <div class="tg-borderheading sidebar">
                 <div class="split"></div>

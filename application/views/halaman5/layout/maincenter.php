@@ -1,10 +1,32 @@
                    
   <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
         <div id="tg-content" class="tg-content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/THybxgJ0TA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="tg-sectionspace tg-haslayout">
+                                    <div class="tg-shortcode tg-welcomeandgreeting">
+
+                                                <?php foreach($data->result() as $r){ ?>
+                                        <figure ><img style="width:200px;hleight:250px" src="<?= base_url('uploads/artikel/'.$r->GAMBAR)?>" alt="image description"></figure>
+                                        <div class="tg-shortcodetextbox">
+                                            <h2>Sambutan Kepala Sekolah</h2>
+                                            <div class="tg-description">
+                                                <?php
+                                                    echo "<p>".substr($r->SAMBUTAN,0,400)."</p>";
+                                                }?>
+                                            </div>
+                                            <span class="tg-name"><b>MOH. BA'IN, S.Pd</b></span>
+                                            <span class="tg-designation">Kepala Sekolah</span>
+                                            <div class="tg-btnpluslogo">
+                                                <a class="tg-btn" href="<?= base_url('sambutan/')?>">Selengkapnya...</a>
+                                               <!--  <strong class="tg-universitylogo"><a href="javascript:void(0);"><img src="<?= base_url('uploads/' . $u->LOGO) ?>" alt="image description"></a></strong> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
             <section class="tg-sectionspace tg-haslayout">
                 <div class="tg-borderheading sidebar">
                 <div class="split"></div>
-                    <h2>&nbsp;Data Guru dan Staf</h2>
+                    <h2>&nbsp;Berita Terbaru</h2>
                 </div>
                 <!-- <div class="tg-borderheading">
                     <h2>Latest Events</h2>
@@ -12,8 +34,11 @@
                 <div class="tg-events">
                     <div class="row">
                         <?php
+
+                        $a = 5000000*2.5/100;
+                        // echo $a;
                         // $no = $this->uri->segment('3') + 1;
-                            foreach ($user as $row) {
+                            foreach ($latest as $row) {
                                 # code...
                                 $jdl = str_replace(" ","-",$row->JUDUL);
                                 $tanggal = substr($row->TANGGALARTIKEL, 0,10);
@@ -27,94 +52,38 @@
                                 $tg = substr($tanggal,8,2);
                                 $bl = substr($tanggal,5,2);
                                 $th = substr($tanggal,0,4);
-                            }
-                            $g=0;
-                            $n=0;
-                            $t='ssssssss sss sss';
-                           foreach ($guru->result() as $row) {
-                            $g++;
-                            $n++;
-                               // code...
-                            if($g%2==0)
-                                $t='';
-                            else
-                                $t='jhja ajhgas afaghs';
-                            $jk='';
-                            if($row->JKGURU==1){
-                              $jk = 'Laki-laki';
-                            }
-                            else if($row->JKGURU==2){
-                              $jk = 'Perempuan';
-                            }
-                            $jb='';
-                            if($row->JABATAN==1){
-                              $jb = 'Kepala Sekolah';
-                            }
-                            else if($row->JABATAN==2){
-                              $jb = 'Waka Kurikulum';
-                            }
-                            else if($row->JABATAN==3){
-                              $jb = 'Waka Humas';
-                            }
-                            else if($row->JABATAN==4){
-                              $jb = 'Waka Kesiswaan';
-                            }
-                            else if($row->JABATAN==5){
-                              $jb = 'BK';
-                            }
-                            else if($row->JABATAN==6){
-                              $jb = 'Tata Usaha';
-                            }
-                            else if($row->JABATAN==7){
-                              $jb = 'Operator';
-                            }
-                            else if($row->JABATAN==8){
-                              $jb = 'Guru';
-                            }
-                                ?>
-                        <!-- 
-                        
-                        <div class="cols-xs-6 s-sm-6 col-md-3 col-lg-3 mb-2">
-                           <div style="background-color:#F5F5F5;padding: 6px;" id="warsna2">
-                                <img style="width:100%;height: 250px" src="<?= base_url('uploads/artikel/'.$row->GAMBARGURU)?>" alt="image description">
-                            
-                                <br><br>
-                                <center>
-                                    <b style="font-size: 13px;color:;" id="warna2-bg"><u><?= $row->NAMAGURU?></u></b><br>
-                                    <?= $jb?><br>
-                                    <div style="font-size: 20px;">
-                                    <i class="fa fa-facebook"></i> |
-                                    <i class="fa fa-instagram"></i> |
-                                    <i class="fa fa-twitter"></i> 
+                        ?>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <article class="tg-themepost tg-eventpost">
+                                <figure class="tg-featuredimg">
+                                <a href="<?=  base_url()?>berita/read/<?= $tg.'/'.$bl.'/'.$th.'/'.$row->LINK.'.html'; ?>" style="width: 100%; height: 150px; overflow: hidden;position: relative;">
+                                        <img src="<?= base_url('uploads/artikel/'.$row->GAMBAR)?>" alt="image description">
+                                    </a>
+                                    <!-- <a href="javascript:void(0);">
+                                        <img src="<?= base_url('uploads/artikel/'.$row->GAMBAR)?>" alt="image description" alt="image description">
+                                    </a> -->
+                                </figure>
+                                <div class="tg-themepostcontent">
+                                    <ul class="tg-matadata">
+                                        <li>
+                                            <a href="<?=  base_url()?>berita/read/<?= $tg.'/'.$bl.'/'.$th.'/'.$row->LINK.'.html'; ?>">
+                                                <i class="fa fa-calendar"></i>
+                                                <span><?= $day[$hari].', '.$tgl ?></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tg-themeposttitle">
+                                        <h3><a href="<?=  base_url()?>berita/read/<?= $tg.'/'.$bl.'/'.$th.'/'.$row->LINK.'.html'; ?>"><?= $row->JUDUL ?></a></h3>
+                                    </div>
+                                    <div class="tg-description">
+                                        <p><?= substr($row->URAIAN,0,50) ?>... <a href="<?=  base_url()?>berita/read/<?= $tg.'/'.$bl.'/'.$th.'/'.$row->LINK.'.html'; ?>">Baca Selanjutnya</a></p>
+                                    </div>
                                 </div>
-                                </center>
-                             </div>
-                           <br><br>
-                        </div> -->
-
+                            </article>
+                        </div>
+                    <?php } ?>
                         
-                        <div class="cols-xs-6 s-sm-6 col-md-3 col-lg-3 mb-2">
-                            <div class="tg-shortcode tlg-welcomeandgreeting" style="background-color:#F5F5F5;padding: 6px;">
-
-                                        <figure ><img styale="width:200px;hleight:250px" src="<?= base_url('uploads/artikel/'.$row->GAMBARGURU)?>" alt="image description"></figure>
-
-                                <center>
-                                    <b style="font-size: 13px;color:;" id="warna2-bg"><u><?= $row->NAMAGURU?></u></b><br>
-                                    <?= $jb?><br>
-                                    <div style="font-size: 20px;">
-                                    <i class="fa fa-facebook"></i> |
-                                    <i class="fa fa-instagram"></i> |
-                                    <i class="fa fa-twitter"></i> 
-                                </div>
-                                </center>
-                        </div>   
                     </div>
-                    
-                    <?php 
-                    if($n%4==0)
-                        echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">&nbsp;</div>';
-                } ?>
-                        
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
                             <center class="tg-themepost tg-eventpost">
                                 <?php echo $this->pagination->create_links(); ?>
@@ -122,6 +91,81 @@
                         </div>
                 </div>
             </section>
+            <section class="tg-sectionspace tg-haslayout">
+                <div class="tg-borderheading sidebar">
+                <div class="split"></div>
+                    <h2>&nbsp;Apa Kata ALumni? </h2>
+                </div>
+                <!-- <div class="tg-borderheading">
+                    <h2>Latest Events</h2>
+                </div> -->
+                <div class="tg-events">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="tg-widget tg-widgetcampuses">
+                                    <div class="tg-widgettitle">
+                                        <h3>&nbsp;</h3>
+                                    </div>
+                                    <div class="tg-widgetcontent">
+                                        <div id="tg-campusslider" class="tg-campusslider owl-carousel tg-campuses">
+                                            <?php 
+                                            foreach($datatesti as $r){
+                                             ?>
+                                            <div class="item">
+                                                <div class="tg-shortcode tg-welcomeandgrgeeting">
+                                                    <div class="tg-shortclodetextbox" style="text-align:center;">
+                                                        <center><img style="width:130px;height:130px;border-radius: 130px;text-align: center;" src="<?= base_url('uploads/artikel/'.$r->GAMBAR)?>" alt="image description"></center>
+                                                        
+                                                        <div class="tg-description">
+                                                            <br>
+                                                           <?= $r->TESTIMONI?>
+                                                        <br>
+                                                        </div>
+                                                        <span class="tg-name"><b><u><?= $r->NAMATESTI?></u></b></span>
+                                                        <span class="tg-designation"><?= $r->JABATAN.' di <b>'.$r->KANTOR.'</b>'?></span>
+                                                            
+                                                            <div>
+                                                                <?php
+                                                                $bintang='start-o';
+                                                                 for ($i=1; $i < 6 ; $i++) { 
+                                                                    if($i <= $r->NILAI)
+                                                                    {
+                                                                        $bintang = 'star';
+                                                                    }
+                                                                    else{
+                                                                        $bintang = 'star-o';
+                                                                    }
+                                                                        ?>
+                                                                <span style="color:orange;"><i class="fa fa-<?= $bintang ?>"></i></span>
+                                                            <?php } ?>
+                                                            </div>
+                                                           
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                           <!--  <article class="tg-themepost tg-eventpost">
+                               <?php
+                               $sp = $this->db->get('tlembaga_md')->result();
+                               $youtube='';
+                               foreach ($sp as $lem) {
+                                $youtube = $lem->YOUTUBE;
+                               }
+                               ?>
+                                <div class="tg-themepostcontent">
+                                   <iframe width="100%" height="515" src="https://www.youtube.com/embed/<?= $youtube ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </article> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
             <!-- <section class="tg-sectionspace tg-haslayout">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">

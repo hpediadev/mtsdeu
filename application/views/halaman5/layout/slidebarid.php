@@ -27,7 +27,7 @@
                                         <div class="tg-description">
                                             <p><?= $s->JUDUL?></p>
                                         </div>
-                                        <a class="tg-btn tg-btnicon" href="<?=  base_url()?>berita/read/<?= $tgl.'/'.$bln.'/'.$thn.'/'.$jdl.'.html'; ?>">
+                                        <a class="tg-btn tg-btnicon" href="<?=  base_url()?>berita/read/<?= $tgl.'/'.$bln.'/'.$thn.'/'.$s->LINK.'.html'; ?>">
                                             <span>Selanjutnya...</span>
                                         </a>
                                     </div>
@@ -56,7 +56,8 @@
                                         <h2>&nbsp;Facebook</h2>
                                     </div>
                                     
-                                   <!--  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmkputrabangsawaru%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmkpb.waru%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=668910424247774"  height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                 </div>
                             </aside>
                         </div>

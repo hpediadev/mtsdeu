@@ -16,6 +16,7 @@
           								</div>
           								<img style="float: left;width: 200px;margin-right: 10px" src="<?= base_url('uploads/artikel/'.$row->GAMBAR)?>" alt="image description">
           								<?= $row->SAMBUTAN?>
+                          <center><b>MOH. BA'IN, S.Pd</b><br>Kepala Sekolah</center>
                         
                     </div>
                 </div>

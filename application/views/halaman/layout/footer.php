@@ -27,7 +27,7 @@
 	</div> -->
 	<div class="tg-footermiddlebar" id="warna2">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="color:#fff;">
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 					<div class="tg-widget tg-widgetcompanyinfo">
 						<div class="tg-widgetcontent">
@@ -104,51 +104,42 @@
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 					<div class="tg-widget tg-widgetcoursecategories">
 						<div class="tg-widgettitle">
-							<h3 style="color:white;">Akses Cepat</h3>
+							<h3 style="color:#fff;">Akses Cepat</h3>
 						</div>
 						<div class="tg-widgetcontent">
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="<?= base_url()?>">Home</a></div>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="<?= base_url('profil.html')?>">Identitas</a></div>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="<?= base_url('visimisi.html')?>">Visi Misi</a></div>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="<?= base_url('sejarah.html')?>">Sejarah</a></div>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="<?= base_url('struktur.html')?>">Struktur</a></div>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url()?>">Home</a></div>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url('profil.html')?>">Identitas</a></div>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url('visimisi.html')?>">Visi Misi</a></div>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url('sejarah.html')?>">Sejarah</a></div>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url('struktur.html')?>">Struktur</a></div>
 		                </div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 					<div class="tg-widget tg-widgetcoursecategories">
 						<div class="tg-widgettitle">
-							<h3 style="color:white;">Jurusan</h3>
+							<h3 style="color:#fff;">Ekskul</h3>
 						</div>
 						<div class="tg-widgetcontent">
-
 							<?php
-              $q = $this->db->get('tprodi_md')->result();
-              foreach($q as $jur){
-              	?>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url() . 'keahlian/read/' . strtolower($jur->SLUG) . '.html' ?>"><?= ucfirst(strtolower($jur->NAMAPRODI)) ?></a></div>
+                                                    $q = $this->db->get('textra_md')->result();
+                                                    foreach($q as $jur){
+                                                    	?>
+							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: #fff;" href="<?= base_url() . 'ekskul/read/' . strtolower($jur->IDEXTRA) . '.html' ?>"><?= ucfirst(strtolower($jur->NAMAEXTRA)) ?></a></div>
 						<?php } ?>
-							<!-- <div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="">Rekayasa Perangkat Lunak</a></div>
-							<div style="border-bottom: 1px solid #fff; height: 30px;padding-top: 4px;padding-bottom: 4px; padding-right: 4px;"><a style="color: white;" href="">Teknik Audio Video</a></div> -->
 		                </div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 					<div class="tg-widget tg-widgetcoursecategories">
 						<div class="tg-widgettitle">
-							<h3 style="color:white;">Video Profil</h3>
+							<h3 style="color:#fff;">Video Profil</h3>
 						</div>
 						<div class="tg-widgetcontent">
-							<iframe width="420" heigsht="345" src="https://www.youtube.com/embed/dS_BVy4Ypfs">
-							</iframe>
+							<!-- <iframe width="420" heigsht="345" src="https://www.youtube.com/embed/dS_BVy4Ypfs">
+							</iframe> -->
 					</div>
 				</div>
-				<!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="tg-widget tg-widgetflickrgallery">
-						<div class="tg-widgettitle">
-									<h3>Instagram</h3>
-								</div>
-						<div class="tg-widgetcontent"> -->
 							<?php
 							$sp = $this->db->get('tlembaga_md')->result();
 							$youtube = '';
@@ -156,93 +147,6 @@
 								$youtube = $lem->YOUTUBE;
 							}
 							?>
-							<!-- <iframe width="420" heigsht="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe> -->
-<!-- 							<div data-mc-src="ace01f12-9e14-497f-999a-45346a075e0f#instagram"></div>
-        
-<script 
-  src="https://cdn2.woxo.tech/a.js#61d52a4dd2aa11001685f37c" 
-  async data-usrc>
-</script> -->
-							<!-- LightWidget WIDGET -->
-						<!-- 	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/987f49eea6aa54aca15d18a0cd0abbde.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
-
-							<!-- <ul>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-10.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-11.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-12.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-13.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-14.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-15.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-16.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-17.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-18.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-19.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-20.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<a href="javascript:void(0);"><img src="images/glance/img-21.jpg" alt="image description"></a>
-												<figcaption><a href="#"><i class="fa fa-mail-forward"></i></a></figcaption>
-											</figure>
-										</li>
-									</ul> --><!-- 
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -252,7 +156,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<span class="tg-copyright"><a style="color:#fff" target="_blank" href="https://www.mediadigitalofficial.com">
-							&copy; Copyright 2021 | SMK Putra Bangsa |
+							&copy; Copyright 2021 | MTs. Miftahul Ulum |
 							All rights reserved
 
 						</a></span>
@@ -270,6 +174,8 @@
 	</div>
 </footer>
 
+</div>
+</div>
 
 
 

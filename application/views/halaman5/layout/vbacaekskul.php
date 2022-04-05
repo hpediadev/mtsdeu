@@ -22,7 +22,7 @@
 									<h4><?= ucfirst(strtolower($row->NAMAEXTRA)) ?></h4>
 								</div>
 								<img style="float: left;width: 450px;margin-right: 10px" src="<?= base_url('uploads/artikel/'.$row->GAMBAREXTRA)?>" alt="image description">
-								<?= $row->URAIANEXTRA ?> 
+                                <?php echo str_replace('<p>','<p align="justify">', str_replace('<p><img', '<p align="center"><img', $row->URAIANEXTRA)) ?>
 						</article>
                     </div>
                 </div>

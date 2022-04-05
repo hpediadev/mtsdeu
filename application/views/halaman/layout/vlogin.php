@@ -123,15 +123,27 @@ body {
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <span class="logo-font">SMK </span>Putra Bangsa
+                        <span class="logo-font">MTs. </span>Darul Ulum II
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
                     <br>
-                    <h3 class="header-title">LOGIN ADMINISTRATOR</h3>
+                    <h3 class="header-title">LOGIN ADMINISTRATOR </h3>
                     <form class="login-form" action="<?= base_url('loginadm/ceklogin')?>" method="post">
+                        <div class="form-group">
+                            <br>
+                            <?php //echo password_hash('admin', PASSWORD_DEFAULT) ?>
+                    <?php 
+        if(!empty($this->session->flashdata("error"))){
+         ?>
+        <div class="col-lxs-12"> <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close btn-sm" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <b><i class="icon fa fa-check"></i> Opss...!. </b><?php echo $this->session->flashdata('error');  ?>
+              </div>
+            <?php }?>
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="username" placeholder="Masukkan Username Anda">
                         </div>
@@ -142,7 +154,7 @@ body {
                             <button class="btn btn-primary btn-block" type="submit">Masuk</button>
                         </div>
                         <div class="form-group">
-                            <div class="text-center"><a href="#!">Lupa Password</a></div>
+                            <!-- <div class="text-center"><a href="#!">Lupa Password</a></div> -->
                         </div>
                     </form>
                 </div>
