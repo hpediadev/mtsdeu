@@ -34,7 +34,7 @@
                                         <b><?= $r->NAMATESTI?></b><br>
                                         <span>Lulus : Tahun <?= $r->LULUS?></span><br>
                                         <span><?= $r->JABATAN?> di <?= $r->KANTOR?></span>
-                                        <?= '<p align="justify">'.substr($r->TESTIMONI,0,1000).'</p>';
+                                        <?= '<p align="justify">'.substr($r->TESTIMONI,0,400).'</p>';
                                                 ?>
                                     </div>
 
