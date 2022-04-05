@@ -8,13 +8,6 @@
 
 
 <head>
-    <!-- Google Analytics -->
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-XXXXX-Y', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
 
     <meta charset="utf-8">
@@ -40,10 +33,16 @@ ga('send', 'pageview');
         // $warna2 ='#33CEFF';
         // $warna3 ='#09a048';
 
-        $warna1 = '#4390cf';
-        $warna2 = '#55769c';
-        $warna3 = $warna2;
+        // $warna1 = '#4390cf';
+        // $warna2 = '#55769c';
+        // $warna3 = $warna2;
 
+        // punya SMK
+
+
+        $warna1 = 'orange';
+        $warna2 = '#bd8306';
+        $warna3 = $warna2;
 
         // warna biru langit #4390cf
 
@@ -79,8 +78,9 @@ ga('send', 'pageview');
             $struktur = '';
             $ekskulid = '';
             $bantuan = '';
-            $guru = '';
             $alumni = '';
+            $guru = '';
+            $siswa='';
 
             $gambar = '';
             $judul = '';
@@ -104,29 +104,31 @@ ga('send', 'pageview');
                 }
             } else if ($menu == 'bantuan') {
                 $bantuan = 'current-menu-item';
-                 $judul = 'Bantuan SMK Putra Bangsa Waru Pamekasan';
-            }else if ($menu == 'alumni') {
+                $judul = 'Bantuan | MTs. Darul Ulum II';
+            } else if ($menu == 'alumni') {
                 $alumni = 'current-menu-item';
-                 $judul = 'Alumni SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Alumni | MTs. Darul Ulum II';
+            } else if ($menu == 'siswa') {
+                $siswa = 'current-menu-item';
             } else if ($menu == 'home' or empty($menu)) {
                 $home = 'current-menu-item';
-                $judul = 'SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'MTs. Darul Ulum II';
             } else if ($menu == 'profil') {
                 $profil = "current-menu-item";
-                $judul = 'Profil SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Profil | MTs. Darul Ulum II';
                 $profilsekolah = "current-menu-item";
             } else if ($menu == 'sejarah') {
                 $profil = 'current-menu-item';
                 $sejarah = 'current-menu-item';
-                $judul = 'Sejarah SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Sejarah | MTs. Darul Ulum II';
             } else if ($menu == 'visimisi') {
                 $profil = "current-menu-item";
                 $visimisi = "current-menu-item";
-                $judul = 'Visi Misi SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Visi Misi | MTs. Darul Ulum II';
             } else if ($menu == 'struktur') {
                 $profil = "current-menu-item";
                 $struktur = "current-menu-item";
-                $judul = 'Struktur SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Struktur | MTs. Darul Ulum II';
             } else if ($menu == 'ekskul') {
                 $ekskulid = "current-menu-item";
                 $b=0;
@@ -138,7 +140,7 @@ ga('send', 'pageview');
                         $judul = $judul;
                     }
                     else{
-                         $judul = 'Berita SMK Putra Bangsa Waru Pamekasan';
+                        $judul='Berita';
                     }
                     $b++;
                 }
@@ -153,13 +155,13 @@ ga('send', 'pageview');
                         $judul = $judul;
                     }
                     else{
-                         $judul = 'Keahlian SMK Putra Bangsa Waru Pamekasan';
+                        $judul='Berita';
                     }
                     $b++;
                 }
             } else if ($menu == 'guru') {
                 $guru = "current-menu-item";
-                $judul = 'Guru SMK Putra Bangsa Waru Pamekasan';
+                $judul = 'Guru | MTs. Darul Ulum II';
             }
         } 
 
@@ -168,9 +170,7 @@ ga('send', 'pageview');
 
     <title><?= $judul ?></title>
     <meta name="description" content="">
-    <meta name="google-site-verification" content="mnzElWY4cok_4nVzVolkACmqqE-_wvRuNjLXEaMEj7U" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="<?= $uri_path ?>" />
+   <!--  <meta property="og:url" content="<?= $uri_path ?>" />
     <meta property="og:image" content="<?= $gambar ?>" />
 
     <meta property="og:title" content="<?= $judul ?>" />
@@ -179,7 +179,7 @@ ga('send', 'pageview');
 
     <meta property="og:image:width" content="1200" />
 
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:height" content="630" /> -->
     <!--  <link rel="apple-touch-icon" href="<?= base_url('apple-touch-icon.png') ?>"> -->
     <link rel="icon" href="<?= base_url('logo.png') ?>" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
@@ -245,8 +245,6 @@ ga('send', 'pageview');
         }
     </style>
 
-    <!-- Bagian css -->
-            <!-- Akhir dari Bagian css -->
             <scrhipt src="<?= base_url('assets/slideshow/assets/js/jquery-1.10.1.min.js') ?>">
                 </script>
                 <scrihpt src="<?= base_url('assets/slideshow/assets/js/bootstrap.min.js') ?>">
@@ -300,36 +298,9 @@ ga('send', 'pageview');
                             }
                         }
                     </script>
-
-
-<script>
-     $(window).load(function(){        
-   $('#myModal').modal('show');
-    }); 
-</script>
 </head>
 
 <body class="tg-home tg-homefour">
-    <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">PPDB 2022</h4>
-      </div>
-      <div class="modal-body">
-        <p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/THybxgJ0TA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-
-  </div>
-</div>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -343,7 +314,7 @@ ga('send', 'pageview');
         <header id="tg-header" class="tg-header tg-haslayout">
             <!--  -->
             <div style="background-color: <?= $warna1 ?>;" id="MyMdenu">
-                <div class="container">
+               <!--  <div class="container">
                     <div class="row ">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
                             <div style="padding: 10px;color: white;">
@@ -352,7 +323,7 @@ ga('send', 'pageview');
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="clearfix"></div>
                 <div class="clearfix"></div>
                 <div class="" style="background-color: <?= $warna2 ?>;" stylle='background-image: url("http://localhost/web/ds.jpg" );  background-repeat: no-repeat;background-size: cover;'>
@@ -365,8 +336,8 @@ ga('send', 'pageview');
                                         <a href=""><img style="height:70px" src="<?= base_url('uploads/' . $u->LOGO) ?>" alt="SMK Putra Bangsa"></a>
                                     </strong>
                                     <div class="tg-noticeboard hidden-xs">
-                                        <div class="tg-textbox" style="color:#fff"><br><br>
-                                            <span>www.smkpbwaru.sch.id</span>
+                                        <div class="tg-textbox" style="color:#fff;"><br><br>
+                                            <span>www.mtsdadu.sch.id</span>
                                             <span>
                                                 <i class="fa fa-phone"></i>
                                                 <?= $u->TELP ?>
@@ -412,29 +383,7 @@ ga('send', 'pageview');
                                                         </ul>
                                                     </a>
                                                 </li>
-                                                <li class="menu-item-has-children <?= $keahlian ?>">
-                                                    <a href="javascript:void(0);">Jurusan</a>
-                                                    <ul class="sub-menu">
-                                                        <?php
-                                                            // $this->db->order_by()
-                                                        $q = $this->db->get('tprodi_md')->result();
-                                                        foreach ($q as $jur) {
-                                                            // echo $rowtags->LINK;
-
-                                                            $menukeahlian = $this->uri->segment(3);
-                                                            $rpl = '';
-                                                            if ($menukeahlian == strtolower($jur->IDPRODI)) {
-                                                                $rpl = "current-menu-item";
-                                                            } else {
-                                                                $rpl = ' ';
-                                                            }
-
-
-                                                        ?>
-                                                            <li class="<?= $rpl ?>"><a href="<?= base_url() . 'keahlian/read/' . strtolower($jur->SLUG) . '.html' ?>"><?= ucfirst(strtolower($jur->NAMAPRODI)) ?></a></li>
-                                                        <?php } ?>
-                                                    </ul>
-                                                    </li>
+                                              
                                         <!-- <li class="menu-item-has-children curdrent-menu-item"> 
                                             <a href="javascript:void(0);">Pegawai</a>
                                             <ul class="sub-menu">
@@ -471,7 +420,6 @@ ga('send', 'pageview');
 
                                                 <li class="<?= $berita ?>"><a href="<?= base_url('berita.html') ?>">Berita</a></li>
                                                 <li class="<?= $guru ?>"><a href="<?= base_url('guru.html') ?>">Guru</a></li>
-                                                <li class="<?= $alumni ?>"><a href="<?= base_url('alumni.html') ?>">Alumni</a></li>
                                                 <!-- <li class="menu-item-has-children ">
                                                     <a href="javascript:void(0);">PPDB
                                                         <ul class="sub-menu">
@@ -516,7 +464,8 @@ ga('send', 'pageview');
                                                         </ul>
                                                     </a>
                                                 </li> -->
-                                                <li class=""><a href="https://www.ppdb.smkpbwaru.sch.id/">PPDB 2022</a></li>
+                                                <li class="<?= $alumni ?>"><a href="<?= base_url('alumni.html') ?>">Alumni</a></li>
+                                                <!-- <li class="<?= $siswa ?>"><a href="<?= base_url('siswa.html') ?>">Grafik Siswa</a></li> -->
                                                 <li class="<?= $bantuan ?>"><a href="<?= base_url('bantuan.html') ?>">Bantuan</a></li>
 
                                             </ul>
@@ -537,79 +486,3 @@ ga('send', 'pageview');
 
         </header>
 
-
-    <div class="row" >
-<?php if($menu=="home" OR empty($menu)){  ?>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: -10px;" >
-        <!-- S -->
-        <div id="slideshow-mudah" class="carousel slide" data-ride="carousel" >
-          <!-- Indicators, Ini adalah Tombol BULET BULET dibawah. item ini dapat dihapus jika tidak diperlukan -->
-          <ol class="carousel-indicators">
-            <?php
-            $no = 0;
-            $k = '';
-            $nno = 0;
-            $kk = '';
-
-            $slide = $this->db->order_by('IDSLIDE','DESC');
-            $slide = $this->db->limit(5);
-            $slide = $this->db->get('tslide_md')->result();
-            foreach ($slide as $row) {
-              if ($no == 0)
-                $k = 'active';
-              else
-                $k = '';
-              $idwows = 'wows1_' . $no;
-            ?>
-              <li data-target="#slideshow-mudah" data-slide-to="<?= $no ?>" class="<?= $k ?>"></li>
-            <?php $no++;
-            } ?>
-          </ol>
-
-          <!-- Wrapper for slides, Ini adalah Tempat Gambar-->
-          <div class="carousel-inner">
-            <?php
-            $no = 0;
-            $k = '';
-            $nno = 0;
-            $kk = '';
-
-            $slide = $this->db->order_by('IDSLIDE','DESC');
-            $slide = $this->db->limit(5);
-            $slide = $this->db->get('tslide_md')->result();
-            foreach ($slide as $row) {
-              if ($no == 0)
-                $k = 'active';
-              else
-                $k = '';
-              $idwows = 'wows1_' . $no;
-            ?>
-              <div class="item <?= $k ?>" >
-                <img width="100%"  alt="slideshow-mudah" src="<?php echo base_url('uploads/' . $row->GAMBAR) ?>">
-                <!—Gambar -->
-                  <div class="carousel-caption">
-                    <!--Penjelasan 
-                                <h3>Slide 1 (Judul)</h3>
-                                <p>Ini adalah Slide 1 (Penjelasan)</p>-->
-                  </div>
-              </div>
-
-            <?php $no++;
-            echo $menu;
-            } ?>
-
-
-          </div>
-
-          <!-- Controls, Ini adalah Panah Kanan dan Kiri. item ini dapat dihapus jika tidak diperlukan-->
-          <a class="left carousel-control" href="#slideshow-mudah" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#slideshow-mudah" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div>
-       
-      </div>
-      <?php } ?>
-  </div>
