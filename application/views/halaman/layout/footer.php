@@ -156,7 +156,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<span class="tg-copyright"><a style="color:#fff" target="_blank" href="https://www.mediadigitalofficial.com">
-							&copy; Copyright 2021 | MTs. Miftahul Ulum |
+							&copy; Copyright 2022 | MTs. Darul Ulum II |
 							All rights reserved
 
 						</a></span>
